@@ -5,7 +5,7 @@ const settings = require('./settings.json');
 
 
 Client.on("ready", () => {
-  Client.user.setGame("*I am broken")
+  //Client.user.setGame("")
   console.log("I am ready!");
 });
 
@@ -57,15 +57,6 @@ if(message.content.startsWith(prefix + "True")){
 
 
 
-
-if(message.content === "how many days until kick off") {
-  message.channel.send("86");
-  console.log('set off test by ${bot.username}');
-  
-}
-
-
-
 if(message.author.bot) return; 
 if(!message.content.startsWith(prefix)) return;
   
@@ -78,17 +69,9 @@ if (command === "say"){
     //message.delete(); 
  }
 
-
  if (message.content.startsWith(prefix + 'Dog') || message.content.startsWith(prefix + 'dog')) {
     message.channel.send("", {files: ["https://68.media.tumblr.com/0a51a580a4da096df6a705bb8f49c8ec/tumblr_ny67j0KPTf1txvwmco1_250.png"]});
   }
-
-/*
-  if(message.content.startsWith(prefix + "Christina")){
-    message.channel.send('<@351144445938368513> You are an ok person');
-  } 
-
-*/
 
   if(message.content.startsWith(prefix + "FakeFacts")){
     var Facts = [
@@ -168,13 +151,6 @@ if (command === "say"){
     }});
 
 
-   //Creator stuff 
-   if (message.content.startsWith(prefix + 'Update')) {
-    if (message.author.id == '147815677699293185'){
-      message.channel.send("Updating....");    
-    }
-  }
-
   if (message.content.startsWith(prefix + 'fight') || message.content.startsWith(prefix + 'Fight')) {
     var responses = [
       " was hit on the head by ", 
@@ -243,67 +219,6 @@ if (command === "say"){
   }
   };
 
-  //owner stuff 
-  if (message.content.startsWith(prefix + 'Reset')) {
-    if (message.author.id == '147815677699293185'){
-      message.channel.send("Restarting...."); 
-    }
-    if(message.author.id != '147815677699293185'){
-      message.channel.send("You don't have premissions to do that");
-    }
-  }
-
-  if (message.content.startsWith(prefix + 'Down')) {
-    if (message.author.id == '147815677699293185'){
-      message.channel.send("**UPDATE** Bot will be shutting down for at least one hour"); 
-    }
-  }
-
-  if (message.content.startsWith(prefix + 'Start')) {
-    if (message.author.id == '147815677699293185'){
-      message.channel.send("Ready for lift off in 5,4,3,2,1"); 
-    }
-    if(message.author.id != '147815677699293185'){
-      message.channel.send("You don't have premissions to do that");
-    }
-  }
- 
-
-
-// WIP stuff
-  var day = 82;
-  
-  if (message.content.startsWith(prefix + 'Kick')) {
-    if (message.author.id == '147815677699293185'){
-          var coin = false; 
-          if(coin = false){
-            day ++;
-          } else {
-            message.channel.send("There are " + day + " days" + " until kickoff");
-          }
-  } 
-    if (message.author.id !== '147815677699293185'){
-        message.channel.send("no no no ");
-    }
-  }
-
-
-
-  if(message.content.startsWith(prefix + "Kickoff")){
-    let modRole = message.guild.roles.find("name","Owner")
-    if(message.member.roles.has(modRole.id)){
-      if(coin = false){
-        while(coin = false){
-          day = day + 1; 
-        } 
-      } else {
-        day = day + 1;
-        message.channel.send(day + "_Days until kick off.");
-      }
-    } else {
-      message.channel.send("Bro you can't do that");
-    }
-  }
 
 
 //_________________________________________________________________
