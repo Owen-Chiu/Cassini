@@ -56,13 +56,6 @@ if(message.content.startsWith(prefix + "invite") || message.content.startsWith(p
 }
 
 
-if(message.content === "how many days until kick off") {
-  message.channel.send("86");
-  console.log('set off test by ${bot.username}');
-  
-}
-
-
 
 if(message.author.bot) return; 
 if(!message.content.startsWith(prefix)) return;
@@ -76,12 +69,7 @@ if(!message.content.startsWith(prefix)) return;
     message.channel.send("", {files: ["https://68.media.tumblr.com/0a51a580a4da096df6a705bb8f49c8ec/tumblr_ny67j0KPTf1txvwmco1_250.png"]});
   }
 
-/*
-  if(message.content.startsWith(prefix + "Christina")){
-    message.channel.send('<@351144445938368513> You are an ok person');
-  } 
 
-*/
 
   if(message.content.startsWith(prefix + "FakeFacts")){
     var Facts = [
