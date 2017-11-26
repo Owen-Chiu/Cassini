@@ -51,12 +51,6 @@ if (message.content.startsWith(prefix + "say")){
   //message.delete(); 
 }
 
-if(message.content.startsWith(prefix + "invite") || message.content.startsWith(prefix + 'Invite')){
-  message.channel.send("Add me to your server! https://discordapp.com/oauth2/authorize?&client_id=362660887850516480&scope=bot&permissions=0");
-}
-
-
-
 if(message.author.bot) return; 
 if(!message.content.startsWith(prefix)) return;
   
@@ -145,12 +139,6 @@ if(!message.content.startsWith(prefix)) return;
     }});
 
 
-
-   if (message.content.startsWith(prefix + 'Update')) {
-    if (message.author.id == '147815677699293185'){
-      message.channel.send("Updating....");    
-    }
-  }
 
   if (message.content.startsWith(prefix + 'fight') || message.content.startsWith(prefix + 'Fight')) {
     var responses = [
