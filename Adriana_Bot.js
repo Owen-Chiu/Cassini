@@ -64,6 +64,9 @@ if(!message.content.startsWith(prefix)) return;
   }
 
 
+  if(message.content.startsWith(prefix + "github")){
+    message.channel.send("Check out my github here: https://github.com/Adrianamm/Cassini")
+  }
 
   if(message.content.startsWith(prefix + "FakeFacts")){
     var Facts = [
@@ -130,6 +133,10 @@ if(!message.content.startsWith(prefix)) return;
         name:"*fight or *Fight",
         value:"Fights"
       },
+      {
+        name:"*github",
+        vaule:"Gives link to github"
+      }
     ],
     timestamp: new Date(),
     footer: {
