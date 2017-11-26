@@ -5,7 +5,11 @@ const settings = require('./settings.json');
 
 
 Client.on("ready", () => {
+<<<<<<< HEAD
   Client.user.setGame("Exploring Space")
+=======
+  //Client.user.setGame("")
+>>>>>>> ad48305b273ee126b9cd80b07a77a3f88f1f9e15
   console.log("I am ready!");
 });
 
@@ -51,10 +55,13 @@ if (message.content.startsWith(prefix + "say")){
   //message.delete(); 
 }
 
+<<<<<<< HEAD
 if(message.content.startsWith(prefix + "invite") || message.content.startsWith(prefix + 'Invite')){
   message.channel.send("Add me to your server! https://discordapp.com/oauth2/authorize?&client_id=362660887850516480&scope=bot&permissions=0");
 }
 
+=======
+>>>>>>> ad48305b273ee126b9cd80b07a77a3f88f1f9e15
 
 
 if(message.author.bot) return; 
@@ -64,13 +71,23 @@ if(!message.content.startsWith(prefix)) return;
   command = command.slice(prefix.length);
   
 
+<<<<<<< HEAD
+=======
+if (command === "say"){
+    message.channel.send(args.join(" "));
+    //message.delete(); 
+ }
+>>>>>>> ad48305b273ee126b9cd80b07a77a3f88f1f9e15
 
  if (message.content.startsWith(prefix + 'Dog') || message.content.startsWith(prefix + 'dog')) {
     message.channel.send("", {files: ["https://68.media.tumblr.com/0a51a580a4da096df6a705bb8f49c8ec/tumblr_ny67j0KPTf1txvwmco1_250.png"]});
   }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> ad48305b273ee126b9cd80b07a77a3f88f1f9e15
   if(message.content.startsWith(prefix + "FakeFacts")){
     var Facts = [
       'If every horse was an Oxgyen atom, we would all die',
@@ -145,6 +162,7 @@ if(!message.content.startsWith(prefix)) return;
     }});
 
 
+<<<<<<< HEAD
 
    if (message.content.startsWith(prefix + 'Update')) {
     if (message.author.id == '147815677699293185'){
@@ -152,6 +170,8 @@ if(!message.content.startsWith(prefix)) return;
     }
   }
 
+=======
+>>>>>>> ad48305b273ee126b9cd80b07a77a3f88f1f9e15
   if (message.content.startsWith(prefix + 'fight') || message.content.startsWith(prefix + 'Fight')) {
     var responses = [
       " was hit on the head by ", 
@@ -220,6 +240,10 @@ if(!message.content.startsWith(prefix)) return;
   }
   };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> ad48305b273ee126b9cd80b07a77a3f88f1f9e15
 
 //_________________________________________________________________
 
