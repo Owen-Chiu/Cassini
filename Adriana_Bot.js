@@ -5,10 +5,11 @@ const settings = require('./settings.json');
 
 
 Client.on("ready", () => {
-  Client.user.setGame("*I am broken")
+  Client.user.setGame("Exploring Space")
   console.log("I am ready!");
 });
 
+/*
 Client.on("guildMemberAdd", number => {
   let guild = member.guild;
   guild.defaultChannel.send('Welcome ${Guild.user.username} to the server')
@@ -19,7 +20,7 @@ Client.on("guildMemberRemove", number => {
   guild.defaultChannel.send('Good bye ${Guild.user.username}')
 });
 
-
+*/
 
 var prefix = "*";
 
@@ -44,18 +45,15 @@ if(message.content.startsWith(prefix + "setgame")){
   }
 }
 
-var day = 82; 
-var Coin = false; 
 
-
-if(message.content.startsWith(prefix + "True")){
-  let modeRole = message.guild.roles.find("name", "Owner")
-  if(message.member.roles.has(modRole.id)){
-     Coin = true;
-  }
+if (message.content.startsWith(prefix + "say")){
+  message.channel.send(args.join(" "));
+  //message.delete(); 
 }
 
-
+if(message.content.startsWith(prefix + "invite") || message.content.startsWith(prefix + 'Invite')){
+  message.channel.send("Add me to your server! https://discordapp.com/oauth2/authorize?&client_id=362660887850516480&scope=bot&permissions=0");
+}
 
 
 if(message.content === "how many days until kick off") {
@@ -72,11 +70,6 @@ if(!message.content.startsWith(prefix)) return;
   let command = message.content.split(" ")[0];
   command = command.slice(prefix.length);
   
-
-if (command === "say"){
-    message.channel.send(args.join(" "));
-    //message.delete(); 
- }
 
 
  if (message.content.startsWith(prefix + 'Dog') || message.content.startsWith(prefix + 'dog')) {
@@ -152,10 +145,6 @@ if (command === "say"){
         value:"Gives you a fake fact",
       }, 
       {
-        name:"*Christina",
-        value:"Tells Christina that she is an okay person. IS BROKEN"
-      },
-      {
         name:"*fight or *Fight",
         value:"Fights"
       },
@@ -168,7 +157,7 @@ if (command === "say"){
     }});
 
 
-   //Creator stuff 
+
    if (message.content.startsWith(prefix + 'Update')) {
     if (message.author.id == '147815677699293185'){
       message.channel.send("Updating....");    
@@ -242,132 +231,6 @@ if (command === "say"){
     
   }
   };
-
-  //owner stuff 
-  if (message.content.startsWith(prefix + 'Reset')) {
-    if (message.author.id == '147815677699293185'){
-      message.channel.send("Restarting...."); 
-    }
-    if(message.author.id != '147815677699293185'){
-      message.channel.send("You don't have premissions to do that");
-    }
-  }
-
-  if (message.content.startsWith(prefix + 'Down')) {
-    if (message.author.id == '147815677699293185'){
-      message.channel.send("**UPDATE** Bot will be shutting down for at least one hour"); 
-    }
-  }
-
-  if (message.content.startsWith(prefix + 'Start')) {
-    if (message.author.id == '147815677699293185'){
-      message.channel.send("Ready for lift off in 5,4,3,2,1"); 
-    }
-    if(message.author.id != '147815677699293185'){
-      message.channel.send("You don't have premissions to do that");
-    }
-  }
- 
-
-
-  if (message.content.startsWith(prefix + 'ChristinaQuote')){
-    var Quote = [
-      'tickle my pickle',
-      'mr friedman could stab me like 20 times and i would apologize to him for making a mess with my blood - Christina',
-      'mrfriedman is typing - Christina',
-      'https://cdn.discordapp.com/attachments/351146680449761281/363799042825650176/image.jpg - Christina',
-      'there is a picture of shrek with sonic licking his nipples but i dont want to get blocked again so im not going to send it - Christina',
-      '@christina#0957 tagging myself lol bill jobs is shook - Christina',
-      'but no homo tho - Christina',
-      'might fuck around and put it deep in Elon musk - Christina',
-      'NO SWEARING ON MY CHRISTIAN SERVER - Christina',
-      'https://cdn.discordapp.com/attachments/351146680449761281/359128456610578455/image.jpg - Christina',
-      'am i edgy enough for u bby - Christina',
-      'while elena is shopping im looking for food that say nut on them and laughing at it - Christina',
-      'i found all of the nuts - Christina',
-      'yes daddy no daddy - Christina',
-      'DRESS UP AS THE KOOL AID MAN AND ILL FUCKING BODY SLAM YOU ALL THE WAY TO THE FIRST FLOOR - Christina',
-      'first good night to guy fieri - Christina',
-      'i almost drown myself drinking water - Christina',
-      'EDGY BAXTER IS SHAKING stip sto stop - Christina',
-      'https://cdn.discordapp.com/attachments/351146680449761281/361602108329426954/image.jpg - Christina',
-      'this is not my first time being block u ass succ deez nuts - Christina',
-      'mr friedboi - Christina',
-      'oh fuck i missed 420 - Christina',
-      'https://cdn.discordapp.com/attachments/351146680449761281/361613216767410176/Screenshot_20170924-161455.png - Christina',
-      '@ everyone succ my nuts - Christina',
-      'I want Guy fieri to laver me up in hot sauce - Christina',
-      'I have a gmail called Gaydaddyhotsauce - Christina',
-      'ma asssss - Christina',      
-      'https://cdn.discordapp.com/attachments/366749282449227777/366761853306667009/unknown.png',
-      'i have a small dicc - Christina'
-    ];
-    var Gross = Math.floor(Math.random()*Quote.length);
-    message.channel.send(`${Quote[Gross]}`)
-  }
-
-  if (message.content.startsWith(prefix + 'Owenisrude')){
-    var Quotes = [
-      'mrfriedman is typing - Christina',
-      'https://cdn.discordapp.com/attachments/351146680449761281/363799042825650176/image.jpg - Christina',
-      'there is a picture of shrek with sonic licking his nipples but i dont want to get blocked again so im not going to send it - Christina',
-      '@christina#0957 tagging myself lol bill jobs is shook - Christina',
-      'but no homo tho - Christina',
-      'NO SWEARING ON MY CHRISTIAN SERVER - Christina',
-      'https://cdn.discordapp.com/attachments/351146680449761281/359128456610578455/image.jpg - Christina',
-      'am i edgy enough for u bby - Christina',
-      'while elena is shopping im looking for food that say nut on them and laughing at it - Christina',
-      'i found all of the nuts - Christina',
-      'yes daddy no daddy - Christina',
-      'DRESS UP AS THE KOOL AID MAN AND ILL FUCKING BODY SLAM YOU ALL THE WAY TO THE FIRST FLOOR - Christina',
-      'first good night to guy fieri - Christina',
-      'i almost drown myself drinking water - Christina',
-      'EDGY BAXTER IS SHAKING stip sto stop - Christina',
-      'https://cdn.discordapp.com/attachments/351146680449761281/361602108329426954/image.jpg - Christina',
-      'this is not my first time being block u  - Christina',
-      'mr friedboi - Christina',
-      'oh fuck i missed 420 - Christina',
-      'https://cdn.discordapp.com/attachments/351146680449761281/361613216767410176/Screenshot_20170924-161455.png - Christina',
-      'https://cdn.discordapp.com/attachments/366749282449227777/366761853306667009/unknown.png'
-    ];
-    var Grosss = Math.floor(Math.random()*Quotes.length);
-    message.channel.send(`${Quotes[Grosss]}`)
-  }
-
-// WIP stuff
-  var day = 82;
-  
-  if (message.content.startsWith(prefix + 'Kick')) {
-    if (message.author.id == '147815677699293185'){
-          var coin = false; 
-          if(coin = false){
-            day ++;
-          } else {
-            message.channel.send("There are " + day + " days" + " until kickoff");
-          }
-  } 
-    if (message.author.id !== '147815677699293185'){
-        message.channel.send("no no no ");
-    }
-  }
-
-
-
-  if(message.content.startsWith(prefix + "Kickoff")){
-    let modRole = message.guild.roles.find("name","Owner")
-    if(message.member.roles.has(modRole.id)){
-      if(coin = false){
-        while(coin = false){
-          day = day + 1; 
-        } 
-      } else {
-        day = day + 1;
-        message.channel.send(day + "_Days until kick off.");
-      }
-    } else {
-      message.channel.send("Bro you can't do that");
-    }
-  }
 
 
 //_________________________________________________________________
