@@ -133,10 +133,6 @@ if(!message.content.startsWith(prefix)) return;
         name:"*fight or *Fight",
         value:"Fights"
       },
-      {
-        name:"*github",
-        vaule:"Gives link to github"
-      }
     ],
     timestamp: new Date(),
     footer: {
