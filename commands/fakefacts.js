@@ -1,6 +1,6 @@
 
 
-f(message.content.startsWith(prefix + "FakeFacts")){
+if(message.content.startsWith(prefix + "FakeFacts")){
     var Facts = [
       'If every horse was an Oxgyen atom, we would all die',
       'Donkey backwards spells Donkey',
